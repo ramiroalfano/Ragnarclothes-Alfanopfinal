@@ -1,0 +1,475 @@
+$color1:#fff;
+body{
+    background-image: url(imagenes/Meteor.svg);
+    background-size:cover;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #a30000;
+    text-align: center;
+    font-size: 2.3rem;
+}
+h2{
+    color: rgb(29, 1, 241);
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+/*inicio index*/
+/*inicio navbar*/
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    color: black;
+}
+
+.navbar img{
+    width: 30%;
+}
+.navbar-brand{
+margin: 10px;
+box-shadow: -9px 9px 26px -6px rgba(0,0,0,0.75);
+-webkit-box-shadow: -9px 9px 26px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: -9px 9px 26px -6px rgba(0,0,0,0.75);
+}
+/*fin navbar*/
+/*inicio banner*/
+.banner{
+    background-image: url(imagenes/fotopaginaweb.jpg);
+    background-size: cover;
+    height: 650px;
+    width: 100%;
+    border-style: double;
+}
+.principal{
+    font-size: 4rem;
+}
+h1{
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+    margin-left: 100%;
+    width: 300%
+    }
+
+    to {
+    margin-left: 0%;
+    width: 100%;
+    }
+}
+.titulobanner{
+    background: rgb(88,88,88);
+    background: radial-gradient(circle, rgba(88,88,88,1) 25%, rgba(34,32,32,1) 66%);
+    box-shadow:2rem #040404;
+    color: #19169e;
+}
+/*fin banner*/
+/*section productos destacados*/
+.tituloprod{
+    background-image: linear-gradient(to top black, rgb(17, 17, 130));
+    text-align: center;
+}
+
+/* proddestacados*/
+.col img{
+    height: 250;
+    width: 250;
+    margin-top: 2rem;
+    gap:10rem;
+    text-align: center;
+    box-shadow: 25px 24px 23px -10px rgba(0,0,0,0.76);
+    -webkit-box-shadow: 25px 24px 23px -10px rgba(0,0,0,0.76);
+    -moz-box-shadow: 25px 24px 23px -10px rgba(0,0,0,0.76);
+}
+
+/*section 2 informacion*/
+.informacion{
+    width: 80%;
+    margin: 2rem auto;
+}
+.informacion p{
+    color: #fff;
+    text-align: justify;
+}
+.informacion__container{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.imagen{
+    width: 80%;
+}
+.informacion__container--reverse{
+    flex-direction: row-reverse;
+}
+/*section 3 dudasyconsultas*/
+.sectiondudas{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 1em;
+}
+.dudasyconsultas{
+    width: 100%;
+}
+.masinfo{
+display: inline-block;
+background-color: #050505;
+color: #fff;
+text-decoration: none;
+padding: 20px 50px;
+border: 3px solid #3c67e3;
+border-radius: 10px;
+margin: 5rem;
+}
+
+.masinfo:hover{
+    animation: pulsate 2s
+    ease-in-out;
+}
+@keyframes pulsate{
+    0%{
+        box-shadow: 
+        0 0 25px #5ddcff,
+        0 0 50px #4e00c2;
+    }
+}
+
+/*Footer*/
+footer{
+    background-image: linear-gradient(to top, #434343 0%, black 100%);
+    background-size: cover;
+    width: 100%;
+}
+.lista{
+    color: white;
+    text-decoration: none;
+}
+.lista:hover{
+    color: #19169e;
+    cursor: pointer;
+}
+/*wpp button*/
+.fa-whatsapp{
+    color: rgb(255, 255, 255);
+    background-color: #3ec34f;
+    padding: 2rem;
+    font-size: 3rem;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+}
+
+.fa-whatsapp::before {
+    box-shadow: 0 0 60px rgba(50, 255, 132, 0.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: all .3s ease-in-out 0s;
+}
+
+.fa-whatsapp:hover, .button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+}
+
+.fa-whatsapp:hover::before, button:focus::before {
+    opacity: 1;
+}
+
+.fa-whatsapp::after {
+    content: '';
+    width: 40px; 
+    height: 40px;
+    border-radius: 100%;
+    border: 6px solid #01c057;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+.fa-whatsapp:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes ring {
+    0% {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+    }
+100% {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    /*index*/
+    /*section productos destacados*/
+    .tituloprod{
+        background-color: #c3c3c3;
+        border-style: double;
+        text-align: center;
+    }
+    /*section 2 informacion*/
+    .informacion{
+        width: 80%;
+        margin: 2rem auto;
+        gap: 5rem;
+    }
+    .informacion p{
+        color: #fff;
+        text-align: justify;
+        margin: 2rem;
+    }
+    .informacion__container{
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+    .imagen{
+        width: 100%;
+    }
+    .informacion__container--reverse{
+        flex-direction: row-reverse;
+    }
+    /*section 3 dudasyconsultas*/
+    .sectiondudas{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        gap: 1em;
+    }
+    .dudasyconsultas{
+        width: 100%;
+    }
+    }
+    @media only screen and (min-width: 768px) and (max-width:1023px){
+    /*index*/
+    /*section 2 informacion*/
+    .informacion p{
+        color: #fff;
+        text-align: justify;
+        margin: 2rem;
+    }
+    }
+    @media only screen and (max-width: 767px){
+    /*index*/
+    /*section productos destacados*/
+    .carrito{
+        color:white;
+        width: 6px;
+        margin-right: 1rem;
+    }
+    .banner{
+        justify-content: center;
+        width: 100%;
+    }
+    .principal{
+        font-size: 2rem;
+    }
+    .tituloprod{
+        background-color: #c3c3c3;
+        border-style: double;
+        text-align: center;
+    }
+    /*section 2 informacion*/
+    .informacion{
+        display: block;
+        width: 100%;
+        margin: 2rem auto;
+    }
+    .imagen{
+        width: 0;
+    }
+    .informacion p{
+        color: #fff;
+        text-align: justify;
+        gap: 3rem;
+    }
+    
+    /*section 3 dudasyconsultas*/
+    .sectiondudas{
+        display: block;
+        text-align: justify;
+    }
+}
+/*inicio css pagina contacto*/
+.bannercontacto{
+    background: rgb(0,0,0);
+background: radial-gradient(circle, rgba(0,0,0,1) 14%, rgba(88,88,88,1) 62%, rgba(33,45,108,0.9476832969515931) 100%);
+}
+.formContainer{
+    border: #fff;
+    width: 75%;
+    margin: 3rem auto;
+    padding: 1.5rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 29%);
+}
+.formContainer__title{
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 1.5rem;
+    text-align: center;
+}
+.form{
+    text-align: center;
+}
+.form__label{
+    display: inline-block;
+    width: 60%;
+    color: #fff;
+    text-align: left;
+    font-weight: 600;
+}
+.form__input, .form__textarea{
+    width: 60%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: #121212;
+    color: #fff;
+    border: none;
+    border-bottom: solid 1px #bd0c0c;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+.form__textarea{
+    height: 5rem;
+    resize: none;
+}
+.form__input:focus, .form__textarea:focus{
+    outline: none;
+}
+.form__input--submit{
+    background-color: #7d0c0c;
+    margin-top: 1.5rem;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    transition: 2s ease-in;
+    z-index: 1;
+    cursor: pointer;
+}
+.form__input--submit:hover{
+    background:#ff96ad;
+    box-shadow: 0 0 5px, 0 0 25px
+    #ff96ad, 0 0 50px #ff96ad, 0 0 200px #ff96ad;
+}
+
+/*fin pag contacto*/
+
+/*inicio css pag nosotros*/
+h2{
+    text-align: center;
+}
+.nosotros{
+    margin: 10px;
+}
+.bannernosotros{
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 14%, rgba(88,88,88,1) 62%, rgba(33,45,108,0.9476832969515931) 100%);
+    }
+.nosotros h3{
+    color: #b00c0c;
+    font-weight: 800;
+    text-align: center;
+    font-size: 1rem;
+}
+.mapacentro{
+    width: 50%;
+    text-align: center;
+}
+.aboutus{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.nuestramusica{
+    margin: 5rem;
+}
+.nuestramusica h2{
+    background-color: #fff;
+    margin: 2rem;
+}
+.nuestramusica p{
+    color: #fff;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+.nuestramusica iframe{
+    margin: 3rem;
+}
+/*fin pag nosotros*/
+
+/*inicio css pag pfrecuentes*/
+.bannerpfrecuentes{
+    background: rgb(0,0,0);
+background: radial-gradient(circle, rgba(0,0,0,1) 14%, rgba(88,88,88,1) 62%, rgba(33,45,108,0.9476832969515931) 100%);
+margin-bottom: 5rem;
+}
+p{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-align: justify;
+}
+.pregfrecuentes{
+    width: 90%;
+    gap: 5rem;
+} 
+.gridpagos{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.envios p{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.pagos{
+    text-align: center;
+}
+.cambios p{
+    text-align: center;
+}
+/*diseño responsive preguntas frecuentes*/
+
+@media only screen and (min-width: 768px) and (max-width:1023px){
+.pregfrecuentes{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 90%;
+    gap: 2rem;
+} 
+
+}
+@media only screen and (max-width: 767px){
+.pregfrecuentes{
+    display: block;
+} 
+}
+/*productos*/
+
+.produc{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 
+    minmax(200px, 1fr));
+    gap: 80px;
+}
+.card-title{
+    text-align: center;
+}
+.btn-primary {
+    justify-content: center;
+}
